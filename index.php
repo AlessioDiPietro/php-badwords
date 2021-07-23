@@ -12,9 +12,11 @@ Tant' è amara che poco è più morte;
 ma per trattar del ben ch'i' vi trovai,
 dirò de l'altre cose ch'i' v'ho scorte.";
 
-$sec_parag = explode(" ", $paragraph);
+// $sec_parag = explode(" ", $paragraph);
 
+$word = $_GET["word"];
 
+$censor_p = str_replace($word,"***",$paragraph);
 
 ?>
 
@@ -38,9 +40,24 @@ Creare una variabile con un paragrafo di testo a vostra scelta. Stampare a scher
 
     <p> <?php echo $paragraph; ?> </p>
 
-    <h3>Lettere Usate: <?php echo strlen($paragraph) ?></h3>
+    <h4>Lettere Usate: <?php echo strlen($paragraph); ?></h4>
 
 </main>
+
+<footer>
+    <h2>INSERISCI LA PAROLA DA CENSURARE!</h2>
+    <form action="index.php" method="get">
+        PAROLA: <input type="text" name="word" placeholder="inserisci la parola qui..">
+        <input type="submit">
+    </form> 
+
+    <h3>La TUA parola: <?php echo $word; ?></h3>
+    <p>
+        <?php echo $censor_p; ?>
+    </p>
+
+    <h4>Lettere Usate: <?php echo strlen($censor_p); ?></h4>
+</footer>
 
 
     

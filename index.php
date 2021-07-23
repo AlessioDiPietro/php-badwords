@@ -42,6 +42,7 @@ Creare una variabile con un paragrafo di testo a vostra scelta. Stampare a scher
 
     <h4>Lettere Usate: <?php echo strlen($paragraph); ?></h4>
 
+    <hr>
 </main>
 
 <footer>
@@ -50,7 +51,7 @@ Creare una variabile con un paragrafo di testo a vostra scelta. Stampare a scher
         PAROLA: <input type="text" name="word" placeholder="inserisci la parola qui..">
         <input type="submit">
     </form> 
-
+    
     <h3>La TUA parola: <?php echo $word; ?></h3>
     <p>
         <?php echo $censor_p; ?>

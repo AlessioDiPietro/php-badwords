@@ -1,3 +1,23 @@
+<?php
+
+$paragraph = "Nel mezzo del cammin di nostra vita
+mi ritrovai per una selva oscura,
+ché la diritta via era smarrita.
+
+Ahi quanto a dir qual era è cosa dura
+esta selva selvaggia e aspra e forte
+che nel pensier rinova la paura!
+
+Tant' è amara che poco è più morte;
+ma per trattar del ben ch'i' vi trovai,
+dirò de l'altre cose ch'i' v'ho scorte.";
+
+$sec_parag = explode(" ", $paragraph);
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +27,22 @@
     <title>BadWords</title>
 </head>
 <body>
+
+
+<!-- Descrizione:
+Creare una variabile con un paragrafo di testo a vostra scelta. Stampare a schermo il paragrafo e la sua lunghezza. Una parola da censurare viene passata dall'utente tramite parametro GET. Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre asterischi (***) tutte le occorrenze della parola da censurare. -->
+<main>
+
+    <h1>Paragrafo 1</h1>
+    <hr>
+
+    <p> <?php echo $paragraph; ?> </p>
+
+    <h3>Lettere Usate: <?php echo strlen($paragraph) ?></h3>
+
+</main>
+
+
     
 </body>
-</html>l
+</html>

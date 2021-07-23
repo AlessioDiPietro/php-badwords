@@ -16,7 +16,7 @@ dirò de l'altre cose ch'i' v'ho scorte.";
 
 $word = $_GET["word"];
 
-$censor_p = str_replace($word,"***",$paragraph);
+$censor_p = str_replace($word,"***",strtolower($paragraph));
 
 ?>
 
